@@ -1,0 +1,9 @@
+<!-- signup.html -->
+<h2>Inscription</h2>
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Nom d'utilisateur">
+    <input type="email" name="email" placeholder="Email">
+    <input type="password" name="password" placeholder="Mot de passe">
+    <button type="submit">S'inscrire</button>
+</form>

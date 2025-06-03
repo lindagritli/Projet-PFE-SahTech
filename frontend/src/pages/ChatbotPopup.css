@@ -1,0 +1,442 @@
+/* ChatbotPopup.css */
+.chatbot-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+.floating-button {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;     /* ⬅️ centre verticalement */
+  justify-content: center; /* ⬅️ centre horizontalement */
+}
+
+.chatbot-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  transform: scale(2.3); /* agrandi tout en gardant centré */
+}
+
+.chat-window {
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-header {
+  background-color: #0a4a5c;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+}
+
+.chat-message {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.chat-input {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input textarea {
+  resize: none;
+  height: 60px;
+  padding: 8px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.chat-input button {
+  background-color: #063034;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background-color: #075752;
+}
+
+/* From Uiverse.io by 0xnihilism */ 
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Common styles for both buttons */
+.brutalist-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  color: #e5dede;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Styles for the second button */
+.button-2 {
+  width: 100px;
+  height: 100px; /* Added to maintain square shape */
+  background-color: #1e5645;
+  border: 3px solid #000000;
+  border-radius: 8px;
+  padding: 14px 14px;
+  box-shadow: 4px 4px 0px #000000;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative; /* Added to ensure proper positioning of pseudo-elements */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -150%;
+  width: 300%;
+  height: 300%;
+  background-color: black;
+  border-radius: 50%;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.5s ease-out;
+}
+
+.button-2:hover::before {
+  transform: translateX(-50%) scale(1);
+}
+
+.button-2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 150%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 25%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.button-2:hover::after {
+  animation: glassPass 0.8s ease-in-out 0.5s forwards;
+}
+
+@keyframes glassPass {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.button-2:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #1;
+}
+
+.button-2:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #000000;
+}
+
+/* Ensure content stays on top */
+.button-2 .openai-logo,
+.button-2 .button-text {
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+/* ... (styles for OpenAI logo and text remain the same) ... */
+
+/* Hover effects */
+.brutalist-button:hover .openai-logo {
+  transform: translateY(-10px);
+}
+
+.brutalist-button:hover .openai-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.bruta.brutalist-button:hover .openai-text {
+  opacity: 1;
+  max-height: 60px;
+  margin-top: 8px;
+}
+
+/* Styles for the OpenAI logo and text */
+.openai-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 3;
+}
+
+.openai-icon {
+  width: 64px;
+  height: 64px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.openai-text {
+  font-size: 24px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.button-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.2;
+  text-align: center;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 3;
+}
+
+.button-text span:first-child {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.button-text span:last-child {
+  font-size: 16px;
+}
+
+/* Hover effects */
+.brutalist-button:hover .openai-logo {
+  transform: translateY(-10px);
+}
+
+.brutalist-button:hover .openai-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.brutalist-button:hover .button-text,
+.brutalist-button:hover .openai-text {
+  opacity: 1;
+  max-height: 60px;
+  margin-top: 8px;
+}
+
+/* Animation for the OpenAI logo */
+@keyframes spin-and-zoom {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.brutalist-button:hover .openai-icon {
+  animation: spin-and-zoom 2s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
+}
+
+.brutalist-button:hover .openai-text {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.brutalist-button:active .openai-icon,
+.brutalist-button:active .openai-text,
+.brutalist-button:active .button-text {
+  transform: scale(0.95);
+}
+
+
+/* From Uiverse.io by Subaashbala - Modified for smaller size */ 
+.modelViewPort {
+  /* Le cercle autour du modèle */
+  perspective: 1000px;
+  width: 5rem;
+  aspect-ratio: 1;
+  border-radius: 50%; /* Changé de 10% à 50% pour un cercle parfait */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #B0B9A8;
+  overflow: hidden;
+}
+.eva {
+  --EVA-ROTATION-DURATION: 4s;
+  transform-style: preserve-3d;
+  animation: rotateRight var(--EVA-ROTATION-DURATION) linear infinite alternate;
+  transform: scale(0.5); /* Réduit de 0.7 à 0.5 */
+}
+.head {
+  position: relative;
+  width: 3rem; /* Réduit de 4rem à 3rem */
+  height: 2rem; /* Réduit de 2.7rem à 2rem */
+  border-radius: 48% 53% 45% 55% / 79% 79% 20% 22%;
+  background: linear-gradient(to right, white 45%, gray);
+}
+.eyeChamber {
+  width: 2.2rem; /* Réduit de 3rem à 2.2rem */
+  height: 1.3rem; /* Réduit de 1.8rem à 1.3rem */
+  position: relative;
+  left: 50%;
+  top: 55%;
+  border-radius: 45% 53% 45% 48% / 62% 59% 35% 34%;
+  background-color: #0c203c;
+  box-shadow: 0px 0px 1px 1px white, inset 0px 0px 0px 1px black;
+  transform: translate(-50%, -50%);
+  animation: moveRight var(--EVA-ROTATION-DURATION) linear infinite alternate;
+}
+.eye {
+  width: 0.6rem; /* Réduit de 0.8rem à 0.6rem */
+  height: 0.7rem; /* Réduit de 1rem à 0.7rem */
+  position: absolute;
+  border-radius: 50%;
+}
+.eye:first-child {
+  left: 6px; /* Réduit de 8px à 6px */
+  top: 50%;
+  background: repeating-linear-gradient(
+    65deg,
+    #9bdaeb 0px,
+    #9bdaeb 1px,
+    white 2px
+  );
+  box-shadow: inset 0px 0px 3px #04b8d5, 0px 0px 10px 1px #0bdaeb;
+  transform: translate(0, -50%) rotate(-65deg);
+}
+.eye:nth-child(2) {
+  right: 6px; /* Réduit de 8px à 6px */
+  top: 50%;
+  background: repeating-linear-gradient(
+    -65deg,
+    #9bdaeb 0px,
+    #9bdaeb 1px,
+    white 2px
+  );
+  box-shadow: inset 0px 0px 3px #04b8d5, 0px 0px 10px 1px #0bdaeb;
+  transform: translate(0, -50%) rotate(65deg);
+}
+.body {
+  width: 3rem; /* Réduit de 4rem à 3rem */
+  height: 4rem; /* Réduit de 5.3rem à 4rem */
+  position: relative;
+  margin-block-start: 0.2rem;
+  border-radius: 47% 53% 45% 55% / 12% 9% 90% 88%;
+  background: linear-gradient(to right, white 35%, gray);
+}
+.hand {
+  position: absolute;
+  left: -0.7rem; /* Réduit de -1rem à -0.7rem */
+  top: 0.4rem; /* Réduit de 0.5rem à 0.4rem */
+  width: 1rem; /* Réduit de 1.3rem à 1rem */
+  height: 2.8rem; /* Réduit de 3.7rem à 2.8rem */
+  border-radius: 40%;
+  background: linear-gradient(to left, white 15%, gray);
+  box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.25);
+  transform: rotateY(55deg) rotateZ(10deg);
+}
+.hand:first-child {
+  animation: compensateRotation var(--EVA-ROTATION-DURATION) linear infinite
+    alternate;
+}
+.hand:nth-child(2) {
+  left: 92%;
+  background: linear-gradient(to right, white 15%, gray);
+  transform: rotateY(55deg) rotateZ(-10deg);
+  animation: compensateRotationRight var(--EVA-ROTATION-DURATION) linear
+    infinite alternate;
+}
+.scannerThing {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 60%;
+  top: 10%;
+  border-top: 80px solid #9bdaeb; /* Réduit de 120px à 80px */
+  border-left: 120px solid transparent; /* Réduit de 170px à 120px */
+  border-right: 120px solid transparent; /* Réduit de 170px à 120px */
+  transform-origin: top left;
+  mask: linear-gradient(to right, white, transparent 35%);
+  animation: glow 2s cubic-bezier(0.86, 0, 0.07, 1) infinite;
+}
+.scannerOrigin {
+  position: absolute;
+  width: 3px; /* Réduit de 5px à 3px */
+  aspect-ratio: 1;
+  border-radius: 50%;
+  left: 60%;
+  top: 10%;
+  background: #9bdaeb;
+  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.5);
+  animation: moveRight var(--EVA-ROTATION-DURATION) linear infinite;
+}

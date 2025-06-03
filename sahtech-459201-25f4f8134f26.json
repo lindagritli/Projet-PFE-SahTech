@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "sahtech-459201",
+  "private_key_id": "25f4f8134f26e9b46efe54a1a279f6480d0d8c93",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDzNlBaQBs+aDx7\nQdrkdSkAc2gU/MKQp5wGiaJuSIEuupd3oYAByki3ntk8bCerSU5IedXyT4/6qlyS\nnKD6GdUlzR6Y7SXtnNo3dfluL/+E8c61EkR3rrZ/FdKz2Tqge6ao52X3Yq9Rip9a\ne0FngmNR9xPhNGdNoe5zEa8hLQPExl0qqIlmUbwFqo1SXojev8lGRTpSqGqMUDfb\nUWJW/Tq0ous3Bk1Lidzzr6brVCUpFahcEliha95wThfCiM6oG1XK08fTc7XcXyMZ\n38wmzmEo6OQ1qOUGaV5gxC2GmXnYrNvw2tIs98ZKByBc4ECtCjwRPQR7/7J7TWPc\nIGB/fFiBAgMBAAECggEABOVe4nmNetkCalj0k7pb42a6At3QOl/Uu0kgbZUqJuif\ncDYec4Vw545hcTmRpl1ySkahROXvCsTMxTBKlCJP6RlbGx5qBSxN9HAclR2O/fbY\nBQs2OOJkiYQk/X/F3KbElPxHMD7VXerlwz6S3gcw9zymCC0ZLRtG3Nw6JkIyWVmQ\nCSYna1aGKrW9P+9Ir40GxkA72Vz8mtarIsNjCKENeOY/CTRv9DYdE2lmtjI57ttB\niiH3xhNK+YYljqgsUdWKdhj9hu7ayquzy5jywkhaIh11xsIWPiXClIBQAjf3auN+\nULiO4u2BxSJYwVMFqaa6CHYklp+eQHKMeaTQcpREWQKBgQD5q2uBULJYNKZsM7es\nF7n9ZP47Y9gn+TZ0lzFNFarB7dBoOlfbZiUihWbWjfEqD6HjsX8DUBh3siTwHJ7p\n1mLLvamD9VF0hcpX0XWnKVjEPxN6VE+wUlEuLtTVkGnOjUB4NbT48AdYEy43/5fO\nc94WHvUe+u6e+/GQGZbkYJn+2QKBgQD5YPq0NfEdFzi08nfQ2f9rNWr4tGPHngTm\nZKXA9NHl9a6Nqz6znZm2CSClsEux31LhwQbKiSxS/nZu4DxRf5QdbMPiCUAmotl9\n+Jt949UM16wm4oPWs1V8caJnRuexZxupBQOYYbkZCs0PZgzSHKMeI9tuwzQb6uXE\nR6jQL7lt6QKBgQCDACnZYVEirQWBkqVV++EQDvTCjsH1P3MOO+KXcr31IWYPukUt\nDmx/r4VlIHcgvbEQ+qoNP/KGo4d0IWBUi7Os+ag/X/HMdQLVj0bvXeeAmSQMNL7X\nYmnMFLCCGlMaGM1yBaQeVjtUQEQpB8hMgElQTBALoFiiPMnj9TlSPUmwCQKBgDLW\nQkVaebykbzrz8tjwl9ETIqtwmqam3/jXq7KaNe/bFaprrmyPRDaHxdABEG1CSXMc\nFnZTYGXK2fngXGuAxoD5GzWJDTrTF+NGOux+9X+Yt891fcrW5CZqQ+Ep4zGXA1yB\nWSpHQaSJPyRUeWibzeTnCmSaBpVqXUyWDyPhlruBAoGAYkJYcKtFyqqYDx24kXg3\nMGXt4BFC+/k5Bz5u0OaU5gZFlzHOa6X9OPU8pWrvtDgyBAKa1r+vCPQDVL9Xit2i\n6Us1iaKEIT/3jj22LIrXXJm1/7SdPEpuhZ7cBbUc8bNs65TjOD7ZRxmyPOLwlN9I\ndEdYpI344pJDDXhNS8AmrPY=\n-----END PRIVATE KEY-----\n",
+  "client_email": "calendar-manager-sahtech@sahtech-459201.iam.gserviceaccount.com",
+  "client_id": "112017934699706119343",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/calendar-manager-sahtech%40sahtech-459201.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
